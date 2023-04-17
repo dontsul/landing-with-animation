@@ -1,0 +1,18 @@
+.android {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2d3240;
+  border: 1px solid #e1e3e9;
+
+  border-radius: 50%;
+  position: absolute;
+  left: 47px;
+  height: 55.5px;
+  width: 55.5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, transform 0.7s ease-in-out;
+}
+.android:hover {
+  transform: translate(0, -10px) rotate(360deg);
+}

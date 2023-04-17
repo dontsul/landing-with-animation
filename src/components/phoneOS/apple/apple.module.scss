@@ -1,0 +1,17 @@
+.apple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2d3240;
+  border-radius: 50%;
+  border: 1px solid #e1e3e9;
+  height: 55.5px;
+  width: 55.5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.apple:hover {
+  z-index: 10;
+  transform: translate(0, -10px) rotate(-360deg);
+}

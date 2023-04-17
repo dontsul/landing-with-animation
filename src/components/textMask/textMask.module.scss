@@ -1,0 +1,78 @@
+.wrapMask {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+}
+.bg {
+  position: relative;
+  font-family: 'MyFont', sans-serif;
+  text-align: center;
+  white-space: normal;
+  font-size: 220px;
+
+  line-height: 0.68;
+  text-transform: uppercase;
+  background: url('../../assets/svg/image.svg') 0 0 / cover no-repeat;
+  color: #de466c;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  width: 350px;
+  word-break: break-all;
+}
+
+.letter {
+  animation: reveal 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.letter0 {
+  animation-delay: 0.5s;
+}
+
+.letter1 {
+  animation-delay: 1s;
+}
+
+.letter2 {
+  animation-delay: 2s;
+}
+
+.letter3 {
+  animation-delay: 1.5s;
+}
+
+.letter4 {
+  animation-delay: 1s;
+}
+
+.letter5 {
+  animation-delay: 0.5s;
+}
+
+@keyframes reveal {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapMask {
+    justify-content: center;
+  }
+  .bg {
+    font-size: 260px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg {
+    font-size: 350px;
+
+    width: 450px;
+  }
+}

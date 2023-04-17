@@ -1,0 +1,122 @@
+.menu {
+  display: grid;
+  grid-template-areas: 'logo button menu ';
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.wrapMenuList {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.burgerMenu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  z-index: 1000;
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.menuList {
+  grid-area: menu;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  right: 0;
+  left: -100%;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 200vh;
+  z-index: 900;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: left 1s;
+  gap: 50px;
+  overflow: hidden;
+  opacity: 60;
+  padding-top: 70px;
+
+  li {
+    padding: 0 30px;
+    width: 100%;
+    a {
+      display: flex;
+      align-items: center;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 21px;
+      color: #ffffff;
+      transition: all 0.3s ease-in-out;
+
+      svg {
+        margin-right: 50px;
+
+        color: #bafd37;
+        font-size: 60px;
+      }
+    }
+    a:hover {
+      color: var(--secondaryColor);
+      transform: translateY(-5px);
+      scale: (1.1);
+    }
+  }
+}
+
+.active {
+  left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    grid-template-areas: 'logo menu button';
+    grid-template-columns: auto 1fr auto;
+    .burgerMenu {
+      display: none;
+    }
+    .menuList {
+      background-color: inherit;
+      width: inherit;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-left: 60px;
+      gap: inherit;
+
+      right: inherit;
+      left: inherit;
+      top: inherit;
+      bottom: inherit;
+      width: inherit;
+      max-height: inherit;
+      padding-top: inherit;
+      li {
+        padding: 0;
+        width: inherit;
+        a {
+          font-size: 24px;
+          color: #000000;
+          svg {
+            display: none;
+          }
+        }
+        a:hover {
+          color: var(--secondaryColor);
+        }
+      }
+    }
+  }
+}

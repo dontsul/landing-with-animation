@@ -1,0 +1,56 @@
+.logoWrap {
+  grid-area: logo;
+
+  display: inline-block;
+  width: auto;
+  z-index: 1000;
+  transition: all 200ms ease-in-out;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding-top: 12px;
+  transition: all 0.5s ease;
+
+  .logoLink {
+    font-family: 'Jomhuria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 0.6;
+
+    cursor: pointer;
+  }
+}
+
+.logoWrap:hover {
+  transform: translateY(-10px);
+}
+
+.disActLogo {
+  color: #2e3341;
+}
+.activeLogo {
+  color: #bafd37;
+}
+
+.logoAppear {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.logoAppearActive {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .logoWrap {
+    z-index: 1;
+    a {
+      color: #2e3341;
+    }
+  }
+}
