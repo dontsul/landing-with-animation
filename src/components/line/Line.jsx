@@ -4,7 +4,7 @@ export const Line = () => {
   return (
     <div className={styles.line}>
       <svg
-        width="1365"
+        width="100%"
         height="349"
         viewBox="0 0 1365 349"
         fill="none"
