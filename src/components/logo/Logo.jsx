@@ -10,20 +10,20 @@ export const Logo = () => {
     [styles.disActLogo]: !menu,
   });
   return (
-    <div className={styles.logoWrap}>
-      <CSSTransition
-        in={true}
-        appear={true}
-        timeout={500}
-        classNames={{
-          appear: styles.logoAppear,
-          appearActive: styles.logoAppearActive,
-        }}
-      >
+    <CSSTransition
+      in={true}
+      appear={true}
+      timeout={500}
+      classNames={{
+        appear: styles.logoAppear,
+        appearActive: styles.logoAppearActive,
+      }}
+    >
+      <div className={styles.logoWrap}>
         <a className={cn(logoClasses, styles.logoLink)} href="!#">
           LANDING
         </a>
-      </CSSTransition>
-    </div>
+      </div>
+    </CSSTransition>
   );
 };

@@ -18,6 +18,12 @@ export const Menu = () => {
     [styles.active]: menu,
   });
 
+  if (menu) {
+    document.body.style.overflowY = 'hidden';
+  } else {
+    document.body.style.overflowY = 'auto';
+  }
+
   return (
     <div className={styles.menu}>
       <Logo />
