@@ -8,8 +8,7 @@ export const Banner = () => {
         <PhoneOS />
         <div className={styles.wrapText}>
           <div className={styles.text}>
-            CHOOSE YOUR
-            <br /> WINTER{' '}
+            CHOOSE YOUR WINTER{' '}
             <span className={styles.look}>
               LOOK
               <span className={styles.star}>
@@ -27,7 +26,6 @@ export const Banner = () => {
                 </svg>
               </span>
             </span>
-            <br />
             APPAREL
           </div>
         </div>

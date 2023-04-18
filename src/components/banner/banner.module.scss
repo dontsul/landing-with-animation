@@ -14,7 +14,8 @@
 .wrapText {
   position: relative;
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 
   animation-name: appear;
   animation-duration: 1s;
@@ -29,6 +30,10 @@
     font-size: 40px;
     color: #000000;
     line-height: inherit;
+
+    max-width: 280px;
+    word-break: keep-all;
+    text-align: center;
   }
 
   .look {
@@ -70,6 +75,7 @@
   .wrapText {
     .text {
       font-size: 60px;
+      max-width: 400px;
     }
   }
 }
@@ -81,6 +87,7 @@
     text-align: start;
     .text {
       font-size: 60px;
+      max-width: 600px;
       .star {
         right: -24px;
         top: -66px;
@@ -92,6 +99,7 @@
   .wrapText {
     .text {
       font-size: 80px;
+      max-width: 700px;
     }
   }
 }
